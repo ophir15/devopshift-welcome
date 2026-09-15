@@ -1,0 +1,15 @@
+---
+description: How this agent should work with a Wix site
+alwaysApply: true
+---
+
+# Wix agent rules
+
+- Read `WHAT-YOU-NEED-TO-DO.md` and `templates/SITE_INFO.md` before changing a live site.
+- Prefer the Wix MCP (`https://mcp.wix.com/mcp`) and skills under `.cursor/skills/` / `vendor/wix-skills/skills/`.
+- Do not invent Wix element IDs, collection IDs, or page file names. Read `wix.config.json` and `src/` from the connected site repo.
+- Do not rename files in `src/pages`. Wix binds those names to editor pages.
+- Do not create new page code files from Git. Ask the user to add the page in the Wix Editor, then sync.
+- Do not publish or mutate live business data unless the user explicitly asked.
+- Never commit `.env`, API keys, or account secrets.
+- Visual layout still belongs in the Wix Editor. This agent owns Velo/code, CMS/API work, apps, and headless integrations.
