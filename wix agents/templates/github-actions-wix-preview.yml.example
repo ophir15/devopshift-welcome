@@ -1,0 +1,24 @@
+# GitHub Actions: Wix CLI preview
+
+Copy this workflow into the **site repo Wix creates**, not only this kit.
+Store `WIX_CLI_API_KEY` as a GitHub Actions secret on that repo.
+
+```yaml
+name: Wix preview
+on:
+  pull_request:
+    branches: [main, master]
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm run wix login -- --api-key ${{ secrets.WIX_CLI_API_KEY }}
+      - run: npm run wix preview
+```
+
+Docs: https://dev.wix.com/docs/develop-websites/articles/workspace-tools/developer-tools/git-integration-wix-cli/set-up-git-hub-actions-to-work-with-the-wix-cli
