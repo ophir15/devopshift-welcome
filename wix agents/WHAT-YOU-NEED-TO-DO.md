@@ -53,11 +53,13 @@ This is the most important Wix-side step. Cloud Agents work on a GitHub repo, no
 6. Copy the clone commands Wix shows (also available later under **Local Dev Setup**).
 7. Save the GitHub URL. Example: `https://github.com/your-user/your-site-wix`
 
+**Already done for Vered:** the Local Dev Setup commands are saved in `LOCAL_SETUP.md`. Repo: `git@github.com:ophir15/Vered.git`.
+
 After this, **site code in the Editor becomes read-only**. You still change layout in the Editor. Page/backend/CSS code moves to GitHub.
 
 Send me:
 
-- The GitHub repo URL
+- Confirmation that Cursor GitHub has access to **ophir15/Vered** (this Cloud Agent could not clone it; the repo is private)
 - The default branch name (`main` or `master`)
 
 ---

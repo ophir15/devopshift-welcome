@@ -2,7 +2,9 @@
 
 Local kit for connecting a **Cursor agent** to a **Wix website**.
 
-This folder is a git repository. It contains Wix Skills, MCP config, the Wix CLI, and the official docs an agent needs. It is **not** your live Wix site. Your site code only appears here after you connect Git Integration on Wix and clone (or point Cursor at) that GitHub repo.
+This folder is tracked in git and contains Wix Skills, MCP config, the Wix CLI, and the official docs an agent needs. It is **not** your live Wix site. Site code lives in **[ophir15/Vered](https://github.com/ophir15/Vered)** after Wix Git Integration.
+
+Wix local setup (CLI, clone, `wix dev`) is in **[LOCAL_SETUP.md](LOCAL_SETUP.md)**.
 
 ## What is already downloaded
 
@@ -13,7 +15,8 @@ This folder is a git repository. It contains Wix Skills, MCP config, the Wix CLI
 | `.cursor/skills/` | The same skills, in the layout Cursor agents look for |
 | `.cursor/mcp.json` | Wix MCP server config (`https://mcp.wix.com/mcp`) |
 | `.cursor/environment.json` | Cloud Agent environment: npm install + Wix MCP allowlist |
-| `docs/official/` | Wix Git, MCP, plugin, and skills documentation |
+| `LOCAL_SETUP.md` | Wix Local Dev Setup: CLI, clone `ophir15/Vered`, `wix dev` |
+| `docs/wix-local-setup.png` | Screenshot of those Wix commands |
 | `node_modules/` (after `npm install`) | `@wix/cli`, `@wix/mcp-remote`, `@wix/agent-skills` |
 
 ## What only you can do on Wix
@@ -42,13 +45,19 @@ In Cursor Desktop, open this folder and run `/add-plugin wix`, or keep the MCP c
 
 ## After Wix Git Integration exists
 
-Clone the **site repo Wix created** next to this kit (gitignored as `site-repo/`):
+The site repo Wix created is **Vered**. Commands from the Wix Local Dev Setup screen:
 
 ```bash
-git clone git@github.com:YOUR_USER/YOUR_WIX_SITE.git site-repo
+npm install -g @wix/cli
+git clone git@github.com:ophir15/Vered.git
+cd Vered
+npm install
+wix dev
 ```
 
-Point Cursor Cloud Agents at **that** repository, not only this kit. This kit teaches the agent how Wix works; the site repo is the actual website code.
+From this folder you can run `bash scripts/setup-local-wix.sh` (see [LOCAL_SETUP.md](LOCAL_SETUP.md)). The clone is gitignored as `Vered/` so it stays a separate GitHub repo.
+
+Point Cursor Cloud Agents at **https://github.com/ophir15/Vered**, not only this kit. This kit teaches the agent how Wix works; `Vered` is the website code.
 
 ## Useful links
 

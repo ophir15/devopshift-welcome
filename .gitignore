@@ -10,3 +10,4 @@ wix agents/node_modules/
 wix agents/.env
 wix agents/.env.local
 wix agents/site-repo/
+wix agents/Vered/

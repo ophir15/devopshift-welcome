@@ -10,6 +10,7 @@
   "scripts": {
     "postinstall": "node scripts/record-packages.mjs",
     "check": "bash scripts/check-setup.sh",
+    "setup:local": "bash scripts/setup-local-wix.sh",
     "wix": "wix",
     "mcp:help": "npx --yes @wix/mcp-remote@latest --help"
   },

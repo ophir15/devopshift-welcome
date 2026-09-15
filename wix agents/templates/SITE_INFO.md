@@ -4,7 +4,7 @@ Fill every field you can. Leave secrets out of this file.
 
 ## Site
 
-- Site name:
+- Site name: Vered
 - Public URL:
 - Editor (Wix Studio / Wix Editor):
 - Site ID (`WIX_SITE_ID`):
@@ -12,7 +12,8 @@ Fill every field you can. Leave secrets out of this file.
 
 ## GitHub (from Wix Git Integration)
 
-- Repo URL:
+- Repo URL: https://github.com/ophir15/Vered
+- Clone (SSH): git@github.com:ophir15/Vered.git
 - Default branch:
 - I granted Cursor GitHub access to this repo: yes / no
 
